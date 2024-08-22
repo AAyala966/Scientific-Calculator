@@ -1,4 +1,4 @@
-package src;
+package src; //simplifying using methods
 import java.util.Scanner;
 public class Main {
      public static void main(String[] args){
@@ -17,19 +17,16 @@ public class Main {
                         String numTwo = scanner.nextLine();
                         double numtwo = Double.parseDouble(numTwo);
                         switch (operation) {
-                            case 1: {
+                            case 1 -> {
                             System.out.println("Answer: " + (numone + numtwo));
-                            break;
                             }
-                            case 2: {
+                            case 2 -> {
                             System.out.println("Answer: " + (numone - numtwo));
-                            break;
                             }
-                            case 3: {
+                            case 3 ->{
                             System.out.println("Answer: " + (numone * numtwo));
-                            break;
                             }
-                            case 4: {
+                            case 4 -> {
                             if (numtwo == 0){
                             System.out.println("Error: Cannot divide by 0. Retry with a number other than 0.");
                             }
@@ -37,12 +34,9 @@ public class Main {
                             System.out.println("Answer: " + (numone / numtwo));
                             System.out.println("Remainder: " + (numone % numtwo));
                             }
-                            break;
-                        }
-                            default: {
-                            }
                             }
                         }
+                            }
                         else if (operation == 5){
                             System.out.print("Please enter the number that corresponds to the operation you want: 1 for square root, 2 for squaring, 3 for the sin, 4 for the cos, 5 for the tan, 6 the natural log, 7 for the exponential: ");
                             String optwo = scanner.nextLine();
@@ -55,7 +49,7 @@ public class Main {
                             while (exitnumber <= 2){
                                 try{
                             switch(operationtwo){
-                                case 1: {
+                                case 1 ->  {
                                     if (x < 0){
                                         System.out.println("Error: Cannot square root a negative number. Retry with a number other than a negative number.");
                                     }
@@ -63,29 +57,24 @@ public class Main {
                                     System.out.println(Math.sqrt(x));
                                     exitnumber = 3;
                                 }
-                                    break;
                                 }
-                                case 2: {
+                                case 2 ->  {
                                     System.out.println(x * x);
                                     exitnumber = 3;
-                                    break;
                                 }
-                                case 3: {
+                                case 3 ->  {
                                     System.out.println(Math.sin(x));
                                     exitnumber = 3;
-                                    break;
                                 }
-                                case 4: {
+                                case 4 ->  {
                                     System.out.println(Math.cos(x));
                                     exitnumber = 3;
-                                    break;
                                 }
-                                case 5:{
+                                case 5 -> {
                                     System.out.println(Math.tan(x));
                                     exitnumber = 3;
-                                    break;
                                 }
-                                case 6: {
+                                case 6 ->  {
                                     if ( x <= 0){
                                         System.out.println("Error: Cannot take that natural log of 0, or a negative number. Retry with a different number.");
                                     }
@@ -93,13 +82,12 @@ public class Main {
                                     System.out.println(Math.log(x));
                                     exitnumber = 3;
                                     }
-                                    break;
                                 }
-                                case 7: {
+                                case 7 ->  {
                                     System.out.println(Math.exp(x));
                                     exitnumber = 3;
-                                    break;
                                 }
+                                default -> {}
                             }
                         }
                         finally { }
